@@ -63,7 +63,7 @@ let markets = [
     //
     // },
     {
-        marketName: 'bittrex',
+        marketName: 'bittrex',      /* fees: 0.25% commission (https://bittrex.com/fees), API: https://bittrex.com/home/api Node.js impl: https://www.npmjs.com/package/node.bittrex.api */
         URL: 'https://bittrex.com/api/v1.1/public/getmarketsummaries',
         toBTCURL: false,
         pairURL : '',
@@ -147,7 +147,7 @@ let markets = [
 
 
     {
-        marketName: 'poloniex',
+        marketName: 'poloniex',  /* Max 0.25% at 30 days trading volume less or equal to 600btc (https://poloniex.com/fees/), API: https://poloniex.com/support/api/*/
         URL: 'https://poloniex.com/public?command=returnTicker',
         toBTCURL: false,
         pairURL : '',
@@ -228,7 +228,7 @@ let markets = [
 	},
 	
 	{
-
+        /* Fees: max 0.26 at monthly volume equal or less to 50,000 btc (https://www.kraken.com/help/fees), API: https://www.kraken.com/help/api */
         marketName: 'kraken', // kraken has no one size fits all market summery so each pair has to be entered as param in GET - will need to add new coins as they are added to exchange
         URL: 'https://api.kraken.com/0/public/Ticker?pair=DASHXBT,EOSXBT,GNOXBT,ETCXBT,ETHXBT,ICNXBT,LTCXBT,MLNXBT,REPXBT,XDGXBT,XLMXBT,XMRXBT,XRPXBT,ZECXBT', //URL To Fetch API From.
         toBTCURL: false, //URL, if needed for an external bitcoin price api.
